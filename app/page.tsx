@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { WalletConnectButton } from "@/components/wallet-connect-button"
+import { NetworkStatus } from "@/components/network-status"
 import { BibleVerseCard } from "@/components/bible-verse-card"
 import { VerseSearch } from "@/components/verse-search"
 import { QuickVerses } from "@/components/quick-verses"
@@ -124,7 +125,10 @@ export default function Home() {
               <p className="text-xs text-muted-foreground">On Base Blockchain</p>
             </div>
           </div>
-          <WalletConnectButton />
+          <div className="flex items-center gap-3">
+            <NetworkStatus />
+            <WalletConnectButton />
+          </div>
         </div>
       </header>
 
